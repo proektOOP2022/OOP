@@ -13,227 +13,234 @@
 </head>
 <body>
 
-<header class = "header">
+<header class = "header" id="header">
     <div class = "container">
         <div class="header__inner">
-            <div class="header__logo"> RMQ  <i class="fa-solid fa-road"></i> </div>
+            <div class="header__logo" data-scroll="#intro"> RMQ  <i class="fa-solid fa-road"></i> </div>
 
-            <nav class="nav">
-                <a class = "nav__link" href="#About">About</a>
-                <a class = "nav__link" href="#Service">Service</a>
-                <a class = "nav__link" href="#Team">TEAM</a>
+            <nav class="nav" id = "nav">
+                <a class = "nav__link" href="#" data-scroll="#about">About</a>
+                <a class = "nav__link" href="#" data-scroll="#service">Service</a>
+                <a class = "nav__link" href="#" data-scroll="#team">TEAM</a>
             </nav>
 
-            <button class="nav-toggle" type="button">
+            <button class="nav-toggle" id="nav_toggle" type="button">
                 <span class = "nav-toggle__item"> Menu </span>
             </button>
         </div>
     </div>
 </header>
 
-<div class="intro">
+<div class="page">
+    <div class="intro" id="intro">
 
-    <div class="container">
-        <div class="intro__inner">
-            <h1 class ="intro__title"> Welcome to Road Map quality</h1>
+        <div class="container">
+            <div class="intro__inner">
+                <h1 class ="intro__title"> Welcome to Road Map quality</h1>
 
-            <a class = "btn" href="https://github.com/proektOOP2022/OOP" target="_blank"> 
-            Learn more</a>
+                <a class = "btn" href="https://github.com/proektOOP2022/OOP" target="_blank"> 
+                Learn more</a>
+            </div>
         </div>
-    </div>
 
-</div> <!-- intro -->
+    </div> <!-- intro -->
 
-<section class="section">
-    <div class="container">
+    <section class="section" id="about">
+        <div class="container">
 
+            <div class="section__header">
+                <h3 class = "section__suptitle"> What we do</h3>
+                <h2 class = "section__title"> Story about us</h2>
+                <div class = "section__text">
+                    <p>###.</p>
+                </div>
+            </div>
+
+            <div class="about">
+
+                <div class="about__item">
+                    <div class="about__inner">
+                        <div class="about__img">
+                            <img src="assets/images/about/1.jpg" alt="">
+                        </div>
+                        <div class="about__text">На сегодняшний момент Россия 
+                        занимает 114 место по качеству дорог</div>
+                    </div>  
+                </div>
+
+                <div class="about__item">
+                    <div class="about__inner">
+                        <div class="about__img">
+                            <img src="assets/images/about/2.jpg" alt="">
+                        </div>
+                        <div class="about__text">Ежегодно в нашей стране 
+                            происходит 50 тысяч аварий из-за ям на дорогах</div>
+                    </div> 
+                </div>
+
+                <div class="about__item"> 
+                    <div class="about__inner">
+                        <div class="about__img">
+                            <img src="assets/images/about/3.jpg" alt="">
+                        </div>
+                        <div class="about__text">Мы разработали навигатор,
+                            строящий маршрут по наиболее качественным дорогам</div>
+                    </div> 
+                </div>
+            </div>
+        
+        </div>  <!-- .container -->
+    </section>
+
+    <div class = "statistics">
+        <div class="container">
+
+            <div class="stat">
+                <div class="stat__item">
+                    <div class="stat__count">404</div>
+                    <div class="stat__text"> напиши статистику</div>
+                </div>
+                <div class="stat__item">
+                    <div class="stat__count">404</div>
+                    <div class="stat__text"> напиши статистику</div>
+                </div>
+                <div class="stat__item">
+                    <div class="stat__count">404</div>
+                    <div class="stat__text"> напиши статистику</div>
+                </div>
+            </div>
+
+        </div>
+    </div> <!-- statistics -->
+
+    <div class="section" id="service">
+        <p><a name="Service"></a></p>
         <div class="section__header">
-            <p><a name="About"></a></p>
-            <h3 class = "section__suptitle"> What we do</h3>
-            <h2 class = "section__title"> Story about us</h2>
+            <h2 class = "section__title"> Product</h2>
             <div class = "section__text">
-                <p>###.</p>
+                <p>Вот здесь можно сделать подсказку и ниже сама карта</p>
             </div>
         </div>
-
-        <div class="about">
-
-            <div class="about__item">
-                <div class="about__inner">
-                    <div class="about__img">
-                        <img src="assets/images/about/1.jpg" alt="">
-                    </div>
-                    <div class="about__text">На сегодняшний момент Россия 
-                    занимает 114 место по качеству дорог</div>
-                </div>  
-            </div>
-
-            <div class="about__item">
-                <div class="about__inner">
-                    <div class="about__img">
-                        <img src="assets/images/about/2.jpg" alt="">
-                    </div>
-                    <div class="about__text">Ежегодно в нашей стране 
-                        происходит 50 тысяч аварий из-за ям на дорогах</div>
-                </div> 
-            </div>
-
-            <div class="about__item"> 
-                <div class="about__inner">
-                    <div class="about__img">
-                        <img src="assets/images/about/3.jpg" alt="">
-                    </div>
-                    <div class="about__text">Мы разработали навигатор,
-                        строящий маршрут по наиболее качественным дорогам</div>
-                </div> 
-            </div>
-        </div>
-    
-    </div>  <!-- .container -->
-</section>
-
-<div class = "statistics">
-    <div class="container">
-
-        <div class="stat">
-            <div class="stat__item">
-                <div class="stat__count">404</div>
-                <div class="stat__text"> напиши статистику</div>
-            </div>
-            <div class="stat__item">
-                <div class="stat__count">404</div>
-                <div class="stat__text"> напиши статистику</div>
-            </div>
-            <div class="stat__item">
-                <div class="stat__count">404</div>
-                <div class="stat__text"> напиши статистику</div>
-            </div>
-        </div>
-
     </div>
-</div> <!-- statistics -->
 
-<div class="section">
-    <p><a name="Service"></a></p>
-    <div class="section__header">
-        <h2 class = "section__title"> Product</h2>
-        <div class = "section__text">
-            <p>Вот здесь можно сделать подсказку и ниже сама карта</p>
+    <section class = "section" id="team">
+        <div class="container">
+            <p><a name="Team"></a></p>
+            <div class="section__header">
+                <h2 class = "section__title"> Our team </h2>
+                <div class = "section__text">
+                    <p>###</p>
+                </div>
+            </div>
+
+            <div class="about">
+                <!-- Дмитрий Путилин -->
+                <div class="about__item"> 
+                    <div class="about__inner">
+                        
+                        <div class="about__img">
+                            <img src="assets/images/team/1.jpg" alt="">
+                        </div>
+
+                        <div class="about__text">
+                            <div class="social">
+                                <a class="social__item" href="https://t.me/putilin21dn" target="_blank">
+                                    <i class="fa-brands fa-telegram"></i>
+                                </a>
+                                <a class="social__item" href="https://github.com/putilin21dn" target="_blank">
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+                            </div>
+                        </div> <!-- about__text -->
+
+                    </div>
+                    <div class="about__info">
+                        <div class="about__name"> Dmitry Putilin </div>
+                        <div class="about__prof"> ML-engineer </div>
+                    </div>
+                </div> <!-- about__item -->
+
+                <!-- Артём Смирнов -->
+                <div class="about__item"> 
+                    <div class="about__inner">
+                        
+                        <div class="about__img">
+                            <img src="assets/images/team/2.jpg" alt="">
+                        </div>
+
+                        <div class="about__text">
+                            <div class="social">
+                                <a class="social__item" href="https://t.me/Liguhas" target="_blank">
+                                    <i class="fa-brands fa-telegram"></i>
+                                </a>
+                                <a class="social__item" href="https://github.com/Liguha" target="_blank">
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+                            </div>
+                        </div> <!-- about__text -->
+
+                    </div>
+                    <div class="about__info">
+                        <div class="about__name"> Artem Smirnov </div>
+                        <div class="about__prof"> Backend-developer </div>
+                    </div>
+                </div> <!-- about__item -->
+
+                <!-- Рокотянский Александр -->
+                <div class="about__item"> 
+                    <div class="about__inner">
+                        
+                        <div class="about__img">
+                            <img src="assets/images/team/3.jpg" alt="">
+                        </div>
+
+                        <div class="about__text">
+                            <div class="social">
+                                <a class="social__item" href="https://t.me/Sly_Al" target="_blank">
+                                    <i class="fa-brands fa-telegram"></i>
+                                </a>
+                                <a class="social__item" href="https://github.com/Sly-al" target="_blank">
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+                            </div>
+                        </div> <!-- about__text -->
+
+                    </div>
+                    <div class="about__info">
+                        <div class="about__name"> Alexander Rokotyansky </div>
+                        <div class="about__prof"> Frontend-developer </div>
+                    </div>
+                </div> <!-- about__item -->
+            </div> <!-- block about team -->
+
         </div>
+    </section>
+
+    <div class="section section--gray">
+        <div class="container">
+
+            <div class="logos">
+                <div class="logos__item">
+                    <img class="logos__img" src="assets/images/logos/1.png" alt="">
+                </div>
+                <div class="logos__item">
+                    <img class="logos__img" src="assets/images/logos/2.png" alt="">
+                </div>
+                <div class="logos__item">
+                    <img class="logos__img" src="assets/images/logos/3.png" alt="">
+                </div>
+            </div>
+
+        </div>
+
     </div>
 </div>
 
-<section class = "section">
-    <div class="container">
-        <p><a name="Team"></a></p>
-        <div class="section__header">
-            <h2 class = "section__title"> Our team </h2>
-            <div class = "section__text">
-                <p>###</p>
-            </div>
-        </div>
-
-        <div class="about">
-            <!-- Дмитрий Путилин -->
-            <div class="about__item"> 
-                <div class="about__inner">
-                    
-                    <div class="about__img">
-                        <img src="assets/images/team/1.jpg" alt="">
-                    </div>
-
-                    <div class="about__text">
-                        <div class="social">
-                            <a class="social__item" href="https://t.me/putilin21dn" target="_blank">
-                                <i class="fa-brands fa-telegram"></i>
-                            </a>
-                            <a class="social__item" href="https://github.com/putilin21dn" target="_blank">
-                                <i class="fa-brands fa-github"></i>
-                            </a>
-                        </div>
-                    </div> <!-- about__text -->
-
-                </div>
-                <div class="about__info">
-                    <div class="about__name"> Dmitry Putilin </div>
-                    <div class="about__prof"> ML-engineer </div>
-                </div>
-            </div> <!-- about__item -->
-
-            <!-- Артём Смирнов -->
-            <div class="about__item"> 
-                <div class="about__inner">
-                    
-                    <div class="about__img">
-                        <img src="assets/images/team/2.jpg" alt="">
-                    </div>
-
-                    <div class="about__text">
-                        <div class="social">
-                            <a class="social__item" href="https://t.me/Liguhas" target="_blank">
-                                <i class="fa-brands fa-telegram"></i>
-                            </a>
-                            <a class="social__item" href="https://github.com/Liguha" target="_blank">
-                                <i class="fa-brands fa-github"></i>
-                            </a>
-                        </div>
-                    </div> <!-- about__text -->
-
-                </div>
-                <div class="about__info">
-                    <div class="about__name"> Artem Smirnov </div>
-                    <div class="about__prof"> Backend-developer </div>
-                </div>
-            </div> <!-- about__item -->
-
-            <!-- Рокотянский Александр -->
-            <div class="about__item"> 
-                <div class="about__inner">
-                    
-                    <div class="about__img">
-                        <img src="assets/images/team/3.jpg" alt="">
-                    </div>
-
-                    <div class="about__text">
-                        <div class="social">
-                            <a class="social__item" href="https://t.me/Sly_Al" target="_blank">
-                                <i class="fa-brands fa-telegram"></i>
-                            </a>
-                            <a class="social__item" href="https://github.com/Sly-al" target="_blank">
-                                <i class="fa-brands fa-github"></i>
-                            </a>
-                        </div>
-                    </div> <!-- about__text -->
-
-                </div>
-                <div class="about__info">
-                    <div class="about__name"> Alexander Rokotyansky </div>
-                    <div class="about__prof"> Frontend-developer </div>
-                </div>
-            </div> <!-- about__item -->
-        </div> <!-- block about team -->
-
-    </div>
-</section>
-
-<div class="section section--gray">
-    <div class="container">
-
-        <div class="logos">
-            <div class="logos__item">
-                <img class="logos__img" src="assets/images/logos/1.png" alt="">
-            </div>
-            <div class="logos__item">
-                <img class="logos__img" src="assets/images/logos/2.png" alt="">
-            </div>
-            <div class="logos__item">
-                <img class="logos__img" src="assets/images/logos/3.png" alt="">
-            </div>
-        </div>
-
-    </div>
-
-</div>
+<!-- jquery -->
+<script 
+    src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js">
+</script>
+<script src = "assets/js/app.js"></script>
 
 </body>
 </html>
