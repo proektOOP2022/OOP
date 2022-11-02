@@ -11,13 +11,13 @@
     crossorigin="anonymous"></script>
 
     <!-- Favicon -->
-    <!-- <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/fav/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/fav/favicon-16x16.png">
+    <link rel="manifest" href="assets/images/fav/site.webmanifest">
+    <link rel="mask-icon" href="assets/images/fav/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#2d89ef">
-    <meta name="theme-color" content="#ffffff"> -->
+    <meta name="theme-color" content="#ffffff">
 
     <meta name = "description" content = "Карта качества дорог в России. 
     Навигатор по хорошим дорогам"/>
@@ -31,7 +31,9 @@
 <header class = "header" id="header">
     <div class = "container">
         <div class="header__inner">
-            <div class="header__logo" data-scroll="#intro"> RMQ  <i class="fa-solid fa-road"></i> </div>
+            <div class="header__logo" id="#intro"> 
+                <a class = "nav__link" href="#" data-scroll="#intro" id="">RMQ</a>
+             </div>
 
             <nav class="nav" id = "nav">
                 <a class = "nav__link" href="#" data-scroll="#about">About</a>
@@ -129,13 +131,14 @@
     </div> <!-- statistics -->
 
     <div class="section" id="service">
-        <p><a name="Service"></a></p>
         <div class="section__header">
             <h2 class = "section__title"> Product</h2>
             <div class = "section__text">
                 <p>Вот здесь можно сделать подсказку и ниже сама карта</p>
             </div>
         </div>
+        <div id="loader" class="player"></div>
+        <div id="map"></div>
     </div>
 
     <section class = "section" id="team">
@@ -255,7 +258,11 @@
 <script 
     src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js">
 </script>
+<script src = "https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=8b89a1ee-780e-4fa6-b888-7d635195587e"></script>
 <script src = "assets/js/app.js"></script>
+<script src = "assets/js/script.js"></script>
+
+
 
 </body>
 </html>
