@@ -18,11 +18,11 @@ io.on('connection', (socket) =>
 {
    socket.on('image', (n, img) =>
    {
-      fs.writeFileSync("resources/" + n + ".jpg", img);
+      fs.writeFileSync("resources/" + socket.id + "_" + n + ".jpg", img);
    });
    socket.on('log', (log) =>
    {
-      fs.writeFileSync("resources/log.txt", log);
+      fs.writeFileSync("resources/" + socket.id + "_log.txt", log);
    });
 });
 

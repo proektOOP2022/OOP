@@ -72,11 +72,13 @@
         }(HTMLCanvasElement.prototype.getContext);
     </script>
     <script src = "socket.io-client/dist/socket.io.js"></script>
-    <script src = "https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=c94bdd40-83ca-40bf-adca-253cf03a910c"></script>
+    <script src = "https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=3e4d9f33-878a-4d28-b506-3cf33684233d"></script>
     <script src = "script.js"></script>
 </head>
 <body>
     <div id="loader" class="player"></div>
     <div id="map"></div>
+    <input value = "150", type = "text", onchange = "change_radius(this)">
+    <input value = "Построить",  type = "button" onclick = "load_panoramas()">
 </body>
 </html>
