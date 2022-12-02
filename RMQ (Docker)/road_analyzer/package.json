@@ -1,0 +1,16 @@
+{
+    "name": "analyzer",
+    "version": "1.0.0",
+    "author": "Liguha",
+    "main": "road_analyzer.js",
+    "scripts": 
+    {
+        "start": "node road_analyzer.js"
+    },
+    "dependencies": 
+    {
+        "amqp": "^0.2.7",
+        "amqplib": "^0.10.3",
+        "micromq": "^1.1.3"
+    }
+}

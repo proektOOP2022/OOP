@@ -1,0 +1,29 @@
+{
+    "YandexStorage":
+    {
+        "accessKeyId": "YCAJE7BObVFZEVix33x6fRekn",
+        "secretAccessKey": "YCPtYlmOAyCJRwv-5JwNJWnwYuu0tuxsE96iUFX4",
+        "bucketName": "rmqbucket"
+    },
+
+    "Server":
+    {
+        "host": "0.0.0.0",
+        "port": 8000
+    },
+
+    "Gateway":
+    {
+        "url": "amqps://yfdhmxgu:hLtKJ5TNDzek4u2ot1M0NuIWtHEN696n@sparrow.rmq.cloudamqp.com/yfdhmxgu"
+    },
+
+    "Database":
+    {
+        "host": "sql8.freesqldatabase.com",
+        "port": 3306,
+        "name": "sql8581593",
+        "user": "sql8581593",
+        "password": "F6rkq118tF",
+        "lifetime": 3600
+    }
+}

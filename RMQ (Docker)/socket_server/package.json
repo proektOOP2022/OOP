@@ -1,0 +1,21 @@
+{
+    "name": "server",
+    "version": "1.0.0",
+    "author": "Liguha",
+    "main": "socket_server.js",
+    "scripts": 
+    {
+        "start": "node extra_process & node socket_server.js"
+    },
+    "dependencies": 
+    {
+        "amqp": "^0.2.7",
+        "amqplib": "^0.10.3",
+        "body-parser": "^1.20.1",
+        "easy-yandex-s3": "^1.1.8",
+        "express": "^4.18.1",
+        "express-xml-bodyparser": "^0.3.0",
+        "micromq": "^1.1.3",
+        "socket.io": "^4.5.3"
+    }
+}
