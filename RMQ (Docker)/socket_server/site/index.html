@@ -1,63 +1,30 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <title>Загрузка панорам</title>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel = "stylesheet" href = "assets/css/style.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+     rel="stylesheet">
+    <script src="https://kit.fontawesome.com/2cf7c44807.js" 
+    crossorigin="anonymous"></script>
 
-    <style>
-        html, body, .player {
-            width: 70%;
-            height: 70%;
-            margin: 0;
-            padding: 0;
-        }
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/fav/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/fav/favicon-16x16.png">
+    <link rel="manifest" href="assets/images/fav/site.webmanifest">
+    <link rel="mask-icon" href="assets/images/fav/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#2d89ef">
+    <meta name="theme-color" content="#ffffff">
 
-        .player {
-            /* прячём от пользователя панорамы, но заставлем его их загружать */
-            width: 500px;
-            height: 250px;  
-            position: absolute;
-            top: -100%;
-            visibility: hidden;
-        }
+    <meta name = "description" content = "Карта качества дорог в России. 
+    Навигатор по хорошим дорогам"/>
+    <meta name = "keywords" content = "Карта качества дорог в России. 
+    Навигатор по хорошим дорогам"/>
 
-        #map {
-            width: 70%;
-            height: 90%;
-        }
-        
-        /* авторское право сосёт - убираем ссылку на правила использования и лого яндекса */
-
-        [class*="ymaps-2-1-79-panorama-control__copyright-link"] 
-        {
-            display: none !important;
-        }
-        
-        [class*="ymaps-2-1-79-panorama-control__copyright-logo"] 
-        {
-            display: none !important;
-        }
-
-        [class*="ymaps-2-1-79-copyright__content-cell"] 
-        {
-            display: none !important;
-        }
-
-        [class*="ymaps-2-1-79-gotoymaps"] 
-        {
-            display: none !important;
-        }
-
-        [class*="ymaps-2-1-79-panorama-gotoymaps"] 
-        {
-            display: none !important;
-        }
-
-        [class*="ymaps-2-1-79-map-copyrights-promo"] 
-        {
-            display: none !important;
-        }
-    </style>
+    <title> Road map quality </title>
     <script>
         HTMLCanvasElement.prototype.getContext = function(old) 
         {
@@ -74,11 +41,262 @@
     <script src = "socket.io-client/dist/socket.io.js"></script>
     <script src = "https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=6bacff31-efdc-4fe1-9e2e-e90338cb8fdc"></script>
     <script src = "script.js"></script>
+
 </head>
 <body>
-    <div id="loader" class="player"></div>
-    <div id="map"></div>
-    <input value = "150", type = "text", onchange = "change_radius(this)">
-    <input value = "Построить",  type = "button" onclick = "load_panoramas()">
+
+<header class = "header" id="header">
+    <div class = "container">
+        <div class="header__inner">
+            <div class="header__logo" id="#intro"> 
+                <a class = "nav__link" href="#" data-scroll="#intro" id="">RMQ</a>
+             </div>
+
+            <nav class="nav" id = "nav">
+                <a class = "nav__link" href="#" data-scroll="#about">About</a>
+                <a class = "nav__link" href="#" data-scroll="#service">Service</a>
+                <a class = "nav__link" href="#" data-scroll="#team">TEAM</a>
+            </nav>
+
+            <button class="nav-toggle" id="nav_toggle" type="button">
+                <span class = "nav-toggle__item"> Menu </span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<div class="page">
+    <div class="intro" id="intro">
+
+        <div class="container">
+            <div class="intro__inner">
+                <h1 class ="intro__title"> Welcome to Road Map quality</h1>
+
+                <a class = "btn" href="https://github.com/proektOOP2022/OOP" target="_blank"> 
+                Learn more</a>
+            </div>
+        </div>
+
+    </div> <!-- intro -->
+
+    <section class="section" id="about">
+        <div class="container">
+
+            <div class="section__header">
+                <h3 class = "section__suptitle"> What we do</h3>
+                <h2 class = "section__title"> Story about us</h2>
+                <div class = "section__text">
+                    <p>###.</p>
+                </div>
+            </div>
+
+            <div class="about">
+
+                <div class="about__item">
+                    <div class="about__inner">
+                        <div class="about__img">
+                            <img src="assets/images/about/1.jpg" alt="">
+                        </div>
+                        <div class="about__text">На сегодняшний момент Россия 
+                        занимает 114 место по качеству дорог</div>
+                    </div>  
+                </div>
+
+                <div class="about__item">
+                    <div class="about__inner">
+                        <div class="about__img">
+                            <img src="assets/images/about/2.jpg" alt="">
+                        </div>
+                        <div class="about__text">Ежегодно в нашей стране 
+                            происходит 50 тысяч аварий из-за ям на дорогах</div>
+                    </div> 
+                </div>
+
+                <div class="about__item"> 
+                    <div class="about__inner">
+                        <div class="about__img">
+                            <img src="assets/images/about/3.jpg" alt="">
+                        </div>
+                        <div class="about__text">Мы разработали навигатор,
+                            строящий маршрут по наиболее качественным дорогам</div>
+                    </div> 
+                </div>
+            </div>
+        
+        </div>  <!-- .container -->
+    </section>
+
+    <div class="section" id="service">
+        <div class="section__header">
+            <h2 class = "section__title"> Product</h2>
+            <div class = "section__text">
+                <p>Вот здесь можно сделать подсказку и ниже сама карта</p>
+            </div>
+        </div>
+       
+        </div>
+    </div>
+    
+
+    <!-- Map -->
+    <div class="container">
+        <div id="loader" class="player"></div>
+        <div id="map"></div>
+        <div class="intro__inner2">
+            <div class="slider">
+                <output for="fader" id="volume">0</output>
+                <input type = "range" id = "fader" min = "0" max = "600" value="0" step="1" oninput="
+                outputUpdate(value); change_radius(value)">
+                <a class = "post" type = "button" onclick = load_panoramas()> 
+                Построить</a>
+            </div>   
+        </div>
+
+        <script type="text/javascript">
+            function outputUpdate(vol) {
+                var output = document.querySelector('#volume');
+                output.value = vol;
+                output.style.left = vol - 20 + 'px';
+                if(output.value > 9) {
+                    output.style.left = vol - 30 + 'px';
+                }
+                if(output.value > 99) {
+                    output.style.left = vol - 40 + 'px';
+                }
+                if(output.value > 240) {
+                    output.style.left = vol - 45 + 'px';
+                }
+                if(output.value > 430) {
+                    output.style.left = vol - 50 + 'px';
+                }
+                if(output.value > 470) {
+                    output.style.left = vol - 55 + 'px';
+                }
+            }
+        </script>
+
+    </div>
+
+    <section class = "section" id="team">
+        <div class="container">
+            <p><a name="Team"></a></p>
+            <div class="section__header">
+                <h2 class = "section__title"> Our team </h2>
+                <div class = "section__text">
+                    <p>###</p>
+                </div>
+            </div>
+
+            <div class="about">
+                <!-- Дмитрий Путилин -->
+                <div class="about__item"> 
+                    <div class="about__inner">
+                        
+                        <div class="about__img">
+                            <img src="assets/images/team/1.jpg" alt="">
+                        </div>
+
+                        <div class="about__text">
+                            <div class="social">
+                                <a class="social__item" href="https://t.me/putilin21dn" target="_blank">
+                                    <i class="fa-brands fa-telegram"></i>
+                                </a>
+                                <a class="social__item" href="https://github.com/putilin21dn" target="_blank">
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+                            </div>
+                        </div> <!-- about__text -->
+
+                    </div>
+                    <div class="about__info">
+                        <div class="about__name"> Dmitry Putilin </div>
+                        <div class="about__prof"> ML-engineer </div>
+                    </div>
+                </div> <!-- about__item -->
+
+                <!-- Артём Смирнов -->
+                <div class="about__item"> 
+                    <div class="about__inner">
+                        
+                        <div class="about__img">
+                            <img src="assets/images/team/2.jpg" alt="">
+                        </div>
+
+                        <div class="about__text">
+                            <div class="social">
+                                <a class="social__item" href="https://t.me/Liguhas" target="_blank">
+                                    <i class="fa-brands fa-telegram"></i>
+                                </a>
+                                <a class="social__item" href="https://github.com/Liguha" target="_blank">
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+                            </div>
+                        </div> <!-- about__text -->
+
+                    </div>
+                    <div class="about__info">
+                        <div class="about__name"> Artem Smirnov </div>
+                        <div class="about__prof"> Backend-developer </div>
+                    </div>
+                </div> <!-- about__item -->
+
+                <!-- Рокотянский Александр -->
+                <div class="about__item"> 
+                    <div class="about__inner">
+                        
+                        <div class="about__img">
+                            <img src="assets/images/team/3.jpg" alt="">
+                        </div>
+
+                        <div class="about__text">
+                            <div class="social">
+                                <a class="social__item" href="https://t.me/Sly_Al" target="_blank">
+                                    <i class="fa-brands fa-telegram"></i>
+                                </a>
+                                <a class="social__item" href="https://github.com/Sly-al" target="_blank">
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+                            </div>
+                        </div> <!-- about__text -->
+
+                    </div>
+                    <div class="about__info">
+                        <div class="about__name"> Alexander Rokotyansky </div>
+                        <div class="about__prof"> Frontend-developer </div>
+                    </div>
+                </div> <!-- about__item -->
+            </div> <!-- block about team -->
+
+        </div>
+    </section>
+
+    <div class="section section--gray">
+        <div class="container">
+
+            <div class="logos">
+                <div class="logos__item">
+                    <img class="logos__img" src="assets/images/logos/1.png" alt="">
+                </div>
+                <div class="logos__item">
+                    <img class="logos__img" src="assets/images/logos/2.png" alt="">
+                </div>
+                <div class="logos__item">
+                    <img class="logos__img" src="assets/images/logos/3.png" alt="">
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<!-- jquery -->
+<script 
+    src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js">
+</script>
+<script src = "assets/js/appWeb.js"></script>
+
+
+
 </body>
 </html>

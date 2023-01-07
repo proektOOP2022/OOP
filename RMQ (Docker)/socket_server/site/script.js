@@ -72,6 +72,7 @@ function draw_quality(a, b, quality)
 
 function change_radius(input)
 {
+    console.log(input)
     if (!loader || !map || !circle || !socket.connected)
         return;
     if (!circle.options.get("draggable"))
@@ -90,6 +91,7 @@ function change_radius(input)
 
 async function load_panoramas()
 {
+    console.log("Work");
     if (!loader || !map || !circle || !socket.connected)
         return;
     map.geoObjects.removeAll();
