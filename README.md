@@ -15,7 +15,7 @@
 
 - [detr_finetuning_custom_dataset](/ML/detr_finetuning_custom_dataset.ipynb) - ноутбук для обучения нейросети
 - [imgaug](/ML/imgaug.ipynb) - ноутбук для создания датасета
-- [detr](/ML/detr.py) - А я хз что писать
+- [detr](/ML/detr.py) - скрипт с обученной моделью для обнаружения ям на дорогах с выгрузкой в json-файл
 
 ### Panorama Loader
 [Panorama Loader](/Panorama%20Loader)
