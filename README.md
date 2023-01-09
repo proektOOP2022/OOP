@@ -5,8 +5,7 @@
 ## Структура
 - [Notebook](#Notebook)
 
-### Jupyter Notebook
-[notebook](/notebook)
+### Notebook
 
 раз раз 
 это хардбасс
