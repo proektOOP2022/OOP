@@ -33,4 +33,4 @@
 - [web](/RMQ%20(Docker)/socket_server/site/index.html) - сайт для проекта
 
 ### Архитектура
-< img width="500" alt="image" src = "https://github.com/proektOOP2022/OOP/blob/main/RMQ%20(Docker)/socket_server/site/assets/images/fftt.png">
+< img width="500" alt="image" src="https://github.com/proektOOP2022/OOP/blob/main/RMQ%20(Docker)/socket_server/site/assets/images/fftt.png">
