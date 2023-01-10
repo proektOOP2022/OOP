@@ -19,11 +19,11 @@
 
     "Database":
     {
-        "host": "sql8.freesqldatabase.com",
+        "host": "sql7.freesqldatabase.com",
         "port": 3306,
-        "name": "sql8581593",
-        "user": "sql8581593",
-        "password": "F6rkq118tF",
-        "lifetime": 3600
+        "name": "sql7589133",
+        "user": "sql7589133",
+        "password": "AkWCd6pukc",
+        "lifetime": 5184000
     }
 }

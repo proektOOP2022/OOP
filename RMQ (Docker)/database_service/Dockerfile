@@ -1,5 +1,4 @@
 FROM node:12
-
 WORKDIR /usr/src/app/database
 
 COPY ./database_service/package.json ./

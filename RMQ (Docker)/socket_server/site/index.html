@@ -38,9 +38,9 @@
             };
         }(HTMLCanvasElement.prototype.getContext);
     </script>
-    <script src = "socket.io-client/dist/socket.io.js"></script>
+    <script src = "assets/socket.io-client/dist/socket.io.js"></script>
     <script src = "https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=6bacff31-efdc-4fe1-9e2e-e90338cb8fdc"></script>
-    <script src = "script.js"></script>
+    <script src = "assets/js/script.js"></script>
 
 </head>
 <body>
@@ -142,15 +142,6 @@
     <div class="container">
         <div id="loader" class="player"></div>
         <div id="map"></div>
-        <div class="intro__inner2">
-            <div class="slider">
-                <output for="fader" id="volume">0</output>
-                <input type = "range" id = "fader" min = "0" max = "600" value="0" step="1" oninput="
-                outputUpdate(value); change_radius(value)">
-                <a class = "post" type = "button" onclick = load_panoramas()> 
-                Построить</a>
-            </div>   
-        </div>
 
         <script type="text/javascript">
             function outputUpdate(vol) {
@@ -175,6 +166,18 @@
             }
         </script>
 
+        <div class="intro__inner2">
+            <div class="slider">
+                <output for="fader" id="volume">0</output>
+                <input type = "range" id = "fader" min = "0" max = "600" value = "150" 
+                    step="1" oninput="outputUpdate(change_radius(this))">
+                <script type="text/javascript">
+                    outputUpdate(150);
+                </script>
+                <a class = "post" type = "button" onclick = load_panoramas()> 
+                Построить</a>
+            </div>   
+        </div>
     </div>
 
     <section class = "section" id="team">

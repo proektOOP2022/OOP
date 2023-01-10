@@ -68,6 +68,11 @@ app.use(express.static(
    staticSiteOptions
 ));
 
+app.get('/', (req, res) => 
+{
+   res.sendFile(`${__dirname}/site/index.html`);
+});
+
 app.use('/build', (req, res) => res.delegate('road_analyzer'));
 app.use('/data_get', (req, res) => res.delegate('database_service'));
 

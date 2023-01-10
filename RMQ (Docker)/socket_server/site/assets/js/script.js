@@ -72,26 +72,24 @@ function draw_quality(a, b, quality)
 
 function change_radius(input)
 {
-    console.log(input)
     if (!loader || !map || !circle || !socket.connected)
-        return;
-    if (!circle.options.get("draggable"))
-    {
-        input.value = circle.geometry.getRadius();
-        return;
-    }
-    var radius = Number(input.value);
-    if (isNaN(radius))
     {
         input.value = 0;
-        radius = 0;
+        return 0;
     }
+    if (!circle.options.get("draggable"))
+    {
+        var radius = circle.geometry.getRadius();
+        input.value = radius;
+        return radius;
+    }
+    var radius = input.value;
     circle.geometry.setRadius(radius);
+    return radius;
 }
 
 async function load_panoramas()
 {
-    console.log("Work");
     if (!loader || !map || !circle || !socket.connected)
         return;
     map.geoObjects.removeAll();
@@ -191,7 +189,8 @@ async function load_panoramas()
 }
 
 ymaps.ready(function () {
-    if (!ymaps.panorama.isSupported()) {
+    if (!ymaps.panorama.isSupported()) 
+    {
         return;
     }
 
@@ -199,7 +198,7 @@ ymaps.ready(function () {
     {
         center: default_point,
         zoom: 15,
-        controls: [],
+        controls: ['searchControl', 'fullscreenControl'],
     });
 
     circle = new ymaps.Circle(

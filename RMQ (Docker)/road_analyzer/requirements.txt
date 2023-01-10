@@ -1,0 +1,13 @@
+json5
+pytorch-lightning
+tensorboard
+tensorboard-plugin-wit
+tensorboardX
+terminado
+testpath
+tifffile
+timm
+torchmetrics
+transformers
+torch
+
