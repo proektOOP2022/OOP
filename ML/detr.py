@@ -178,7 +178,7 @@ def quality(bbox):
 
 
 import json
-with open("test/_annotations.coco.json") as file:
+with open("test/_annotations.json") as file:
     annotations = json.load(file)
 images = annotations['images']
 ans = []
