@@ -6,9 +6,9 @@
 
 ## Структура
 - [Machine learning](#ML)
-- [Panorama Loader](#panorama-loader)
 - [RMQ and Docker](#rmq-and-docker)
 - [Site](#site)
+- [Structure](#общий-принцип-работы)
 
 ### ML
 [ML](/ML)
@@ -17,17 +17,12 @@
 - [imgaug](/ML/imgaug.ipynb) - ноутбук для создания датасета
 - [detr](/ML/detr.py) - скрипт с обученной моделью для обнаружения ям на дорогах с выгрузкой в json-файл
 
-### Panorama Loader
-[Panorama Loader](/Panorama%20Loader)
-
-- [app](/Panorama%20Loader/app.js) - скачивание фотографий с понорам
-
 ### RMQ and Docker
 [RMQ](/RMQ%20(Docker))
 
-- [database_service](/RMQ%20(Docker)/database_service/database_service.js) - комментарий
+- [database_service](/RMQ%20(Docker)/database_service/database_service.js) - взаимодействие с базой данных
 - [road_analyzer](/RMQ%20(Docker)/road_analyzer/road_analyzer.js) - выводим на основании полученных данных от нейросети качество дороги на карту
-- [config](/RMQ%20(Docker)/config.json) - настройки для rabbitMQ
+- [config](/RMQ%20(Docker)/config.json) - настройки для rabbitMQ, bucket, ports etc.
 
 ### Site
 [site](/RMQ%20(Docker)/socket_server/site)
@@ -36,3 +31,7 @@
 
 ### Архитектура
 <img width="500" alt="image" src="https://github.com/proektOOP2022/OOP/blob/main/RMQ%20(Docker)/socket_server/site/assets/images/fftt.png">
+
+### Общий принцип работы
+
+После запроса пользователя на построение карты на клиентской стороне происходит обход графа панорам из заданной точки. В каждой вершине происходит запрос к базе данных, если значение дороги записано, то она сразу строится. В случае, когда запись устарела или отсутствует, картинка панорамы сохраняется(она отправляется серверу, который помещает её в bucket). По завершению обхода на сервер отправляется запрос об анализе отправленных изображений. Этот запрос делегируется микросервису, который и выполняет данную работу, после чего отправляет ответ клиенту и добавляет проанализированные картинки в базу данных(через сообщения другому микросервису). Получив ответ, клиент достраивает карту по полученным данным. При отключении пользователя сервер удаляет соответствующую папку с картинками из bucket.  
